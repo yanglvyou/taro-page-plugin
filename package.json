@@ -1,6 +1,6 @@
 {
   "name": "taro-page-plugin",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "Taro 页面生成插件",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,10 @@
   ],
   "author": "yanglvyou",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanglvyou/taro-page-plugin/issues"
+  },
+  "homepage": "https://github.com/yanglvyou/taro-page-plugin#readme",
   "dependencies": {
     "@tarojs/helper": "^3.4.1",
     "@tarojs/service": "^3.4.1",
