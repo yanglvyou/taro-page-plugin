@@ -8,14 +8,14 @@ const path = require('path');
 const pageJSX = ({ name, cssName, cssExtStr, version }) =>
   `
   ${
-    version === 2
-      ? `import React from 'react'`
-      : `import React, { useState, useEffect } from 'react';`
+    version == 3
+      ? `import React, { useState, useEffect } from 'react';`
+      : `import React from 'react'`
   }
-  ${
-    version === 3
-      ? `import { useDispatch, useSelector } from 'react-redux';`
-      : `import { useSelector, useDispatch } from '@tarojs/redux';`
+ ${
+  version == 3
+    ? `import { useDispatch, useSelector } from 'react-redux';`
+    : `import { useSelector, useDispatch } from '@tarojs/redux';`
   }
   import Taro, { useDidShow, useRouter } from '@tarojs/taro';
   import { View, Input, Image, Text } from '@tarojs/components';

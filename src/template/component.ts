@@ -6,13 +6,13 @@ const path = require('path');
 
 const componentJSX = ({ name, cssName, cssExtStr, version }) =>
   `
+  ${
+    version == 3
+      ? `import React, { useState, useEffect } from 'react';`
+      : `import React from 'react'`
+  }
 ${
-  version === 2
-    ? `import React from 'react'`
-    : `import React, { useState, useEffect } from 'react';`
-}
-${
-  version === 3
+  version == 3
     ? `import { useDispatch, useSelector } from 'react-redux';`
     : `import { useSelector, useDispatch } from '@tarojs/redux';`
 }
